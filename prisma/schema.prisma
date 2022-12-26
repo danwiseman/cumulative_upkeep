@@ -1,0 +1,35 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+generator pothos {
+  provider = "prisma-pothos-types"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model WeatherCard {
+  id String @id @map("_id")
+  sf_id String @unique
+  card_name       String
+
+  weather_tags String[]
+  temperature_range Int[]
+
+  card_images CardImage
+
+  @@map("weather_cards")
+}
+
+type CardImage {
+  small  String
+  normal String
+  large  String
+  png    String
+}

@@ -1,4 +1,10 @@
 node_modules/*
 .idea
 yarn.lock
+package-lock.json
 
+.env
+
+# compiled js files from the ts ones.
+src/*.js
+schema.js
