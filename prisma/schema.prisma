@@ -20,7 +20,7 @@ model WeatherCard {
   card_name       String
 
   weather_tags String[]
-  temperature_range Int[]
+  temperature_range TemperatureRange
 
   card_images CardImage
 
@@ -32,4 +32,9 @@ type CardImage {
   normal String
   large  String
   png    String
+}
+
+type TemperatureRange {
+  min Int
+  max Int
 }
