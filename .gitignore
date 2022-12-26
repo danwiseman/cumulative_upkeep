@@ -8,3 +8,6 @@ package-lock.json
 # compiled js files from the ts ones.
 src/*.js
 schema.js
+
+prisma/client/*
+prisma/generated.d.ts
