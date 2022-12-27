@@ -1,0 +1,27 @@
+type Query {
+    weatherCard(sf_id: ID): WeatherCard
+    allWeatherCards: [WeatherCard]
+    weatherCardsByTag(tagsList: String): [WeatherCard]
+    weatherCardsByTemp(temperature: Int): [WeatherCard]
+    weatherCardsByTagsAndTemp(tagsList: String, temperature: Int): [WeatherCard]
+}
+
+type WeatherCard {
+    sf_id: ID!
+    card_name: String
+    card_images: CardImages
+    weather_tags: [String]
+    temperature_range: TemperatureRange
+}
+
+type CardImages {
+    small: String
+    normal: String
+    large: String
+    png: String
+}
+
+type TemperatureRange {
+    min: Int
+    max: Int
+}

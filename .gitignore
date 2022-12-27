@@ -11,3 +11,6 @@ schema.js
 
 prisma/client/*
 prisma/generated.d.ts
+
+dist/*
+src/generated/*
